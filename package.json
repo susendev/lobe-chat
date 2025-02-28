@@ -26,7 +26,7 @@
   "author": "LobeHub <i@lobehub.com>",
   "sideEffects": false,
   "scripts": {
-    "build": "next build",
+    "build": "NODE_OPTIONS='--max-old-space-size=4096' next build",
     "build:analyze": "ANALYZE=true next build",
     "build:docker": "DOCKER=true next build && npm run build-sitemap",
     "postbuild": "npm run build-sitemap && npm run build-migrate-db",
